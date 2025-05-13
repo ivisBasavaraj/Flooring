@@ -17,6 +17,9 @@ import {
   Plugins as PlannerPlugins,
 } from 'react-planner'; //react-planner
 
+// Define isProduction variable if it's not injected by webpack
+const isProduction = typeof isProduction !== 'undefined' ? isProduction : process.env.NODE_ENV === 'production';
+
 //define state
 let AppState = Map({
   'react-planner': new PlannerModels.State()
